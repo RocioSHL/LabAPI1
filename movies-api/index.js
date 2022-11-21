@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import moviesRouter from './api/movies';
+import genrerouter from './api/genres';
 
 
 dotenv.config();
@@ -11,6 +12,7 @@ const port = process.env.PORT;
 
 
 app.use('/api/movies', moviesRouter);
+app.use('/api/genres',genrerouter);
 app.use(express.json());
 
 app.listen(port, () => {
