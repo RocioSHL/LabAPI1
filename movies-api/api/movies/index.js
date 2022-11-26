@@ -20,6 +20,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
         res.status(404).json({message: 'The resource you requested could not be found.', status_code: 404});
     }
 }));
+
 // Get movie reviews
 router.get('/:id/reviews', (req, res) => {
     const id = parseInt(req.params.id);
